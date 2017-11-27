@@ -15,6 +15,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity  implements AdapterView.OnItemSelectedListener{
@@ -147,6 +148,27 @@ public class MainActivity extends AppCompatActivity  implements AdapterView.OnIt
                 txtent.setText(aux2[0]);
                 txtent2.setText(aux2[2]);
                 txtent3.setText(aux2[4]);
+
+                Spinner spinner = findViewById(R.id.spinner);
+                int num = 0 ;
+                switch (aux2[1]){
+                    case "+":
+                        num =0;
+                        break;
+                    case "-":
+                        num =1;
+                        break;
+                    case "*":
+                        num =2;
+                        break;
+                    case "/":
+                        num =3;
+                        break;
+                }
+                spinner.setSelection(num);
+
+
+
 
 
             }
